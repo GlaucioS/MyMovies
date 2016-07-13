@@ -1,10 +1,18 @@
-<html>
+<html ng-app="myMovie">
 	<head>
 		<title>MyMovies</title>
-		
+		<link rel="stylesheet" type="text/css" href="lib/bootstrap-3.3.6/css/bootstrap.css">
+		<script src="lib/angular/angular.min.js"></script>
+		<script>
+			angular.module("myMovie",[]);
+			angular.module("myMovie").controller("topCtrl",function($scope){
+				$scope.title = "My Movies";
+			});
+		</script>
 	</head>
 	<body>
-		<h1>MyMovies</h1>
+		<div ng-controller="topCtrl">
+			<h1>{{title}}</h1>
+		</div>
 	</body>
-	
 </html>
